@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>runbird-spring</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>AppFuse Modular Application</name>
+    <url>http://www.mycompany.com</url>
+
+    <modules>
+        <module>core</module>
+        <module>web</module>
+    </modules>
+
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-core</artifactId>-->
+<!--            <version>${spring.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-aop</artifactId>-->
+<!--            <version>${spring.version}</version>-->
+<!--        </dependency>-->
+
+        <!-- spring-context 引入了 spring-context 和 spring-expression
+        以及 spring-core包中spring-core 和 spring-jcl
+             spring-aop中 spring-beans、spring-aop -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+    
+
+
+    <properties>
+        <!-- Application settings -->
+        <copyright.year>2020</copyright.year>
+        <dao.framework>hibernate</dao.framework>
+        <web.framework>spring</web.framework>
+
+        <!-- Framework dependency versions -->
+        <spring.version>5.2.5.RELEASE</spring.version>
+    </properties>
+</project>
